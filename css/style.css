@@ -1,0 +1,278 @@
+/* Google Fonts - Creepster */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Creepster", sans-serif;
+}
+
+/* Body Styles */
+body {
+    background-image: url('images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* Giữ hình nền cố định */
+}
+
+/* Main Content Wrapper */
+main {
+    margin: 250px 0 0 0; /* Đẩy nội dung chính xuống dưới để tránh che background */
+}
+
+/* Header Styles */
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 5px 0;
+    font-size: 100px;
+}
+
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+/* Category Styles */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+    max-width: 1200px;
+}
+
+.category {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Nền trắng trong suốt */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.category h2 {
+    font-size: 25px;
+}
+
+.category ul {
+    list-style: none; /* Xóa dấu chấm bullet */
+}
+
+/* Image Styles */
+.button-and-image {
+    display: flex;
+    flex-direction: column; /* Xếp ảnh và nút theo cột */
+    align-items: center;
+    text-align: center;
+}
+
+.category img {
+    width: 200px; /* Kích thước ảnh */
+    /* Animation transition */
+    transition: transform 0.5s ease;
+}
+
+.category img:hover {
+    transform: scale(1.2) rotate(30deg); /* Hiệu ứng phóng to và xoay khi di chuột */
+}
+
+/* Button Styles */
+.my-button {
+    background-color: #f8822b;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.my-button a {
+    text-decoration: none; /* Xóa gạch chân khỏi link */
+    color: #fff;
+}
+
+.my-button:hover {
+    background-color: #f17c28;
+}
+
+/* Responsive Design (Media Query) */
+@media screen and (max-width: 1206px) {
+    .container {
+        flex-direction: column; /* Xếp các category theo cột trên màn hình nhỏ */
+        text-align: center;
+    }
+}
+
+
+
+
+/* --- Bổ sung vào file css/style.css hiện có --- */
+
+/* Wrapper cho nội dung Form Liên hệ trên trang riêng */
+.container-full {
+    padding: 20px;
+    margin: 50px auto 20px auto;
+    max-width: 800px;
+}
+
+#contact-form-section {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center; /* Giữ form ở giữa */
+}
+
+/* Định dạng riêng cho Form trên trang Liên hệ */
+.contact-page-form {
+    flex: none; /* Không chiếm hết chiều rộng như các category */
+    max-width: 600px; /* Giới hạn chiều rộng của form */
+    border: 3px solid #ff6600; /* Đường viền đậm hơn */
+    box-shadow: 0 0 20px rgba(255, 102, 0, 0.5); /* Bóng cam ma mị */
+    background-color: rgba(0, 0, 0, 0.9); /* Nền tối hơn cho form */
+    color: #f5f5f5;
+}
+
+.contact-page-form h2 {
+    color: #ff6600;
+}
+
+/* Định dạng input và textarea */
+.contact-page-form label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #ff6600; /* Label màu cam */
+}
+
+.contact-page-form input[type="text"],
+.contact-page-form input[type="email"],
+.contact-page-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ff6600;
+    background-color: #1a1a1a; /* Nền input màu đen */
+    color: #f5f5f5;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: sans-serif; /* Dùng font dễ đọc cho input */
+}
+
+.contact-page-form textarea {
+    resize: vertical; /* Chỉ cho phép kéo dãn theo chiều dọc */
+}
+
+/* Nút Gửi (Sử dụng lại class .my-button) */
+.contact-page-form .submit-button {
+    width: 100%;
+    margin-top: 30px;
+    font-size: 1.5em;
+    padding: 15px 0;
+    background-color: #ff6600;
+    color: #1a1a1a;
+    border: none;
+}
+
+.contact-page-form .submit-button:hover {
+    background-color: #f17c28;
+}
+
+/* Loại bỏ ảnh và nút mặc định khỏi form này */
+.contact-page-form .button-and-image {
+    display: none; 
+}
+
+
+
+/* --- Bổ sung vào file css/style.css cho Trang Đăng Ký --- */
+
+#registration-form-section {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Định dạng riêng cho Form trên trang Đăng ký (Sử dụng style tương tự Contact) */
+.registration-page-form {
+    flex: none;
+    max-width: 600px;
+    border: 3px solid #ff6600; 
+    box-shadow: 0 0 20px rgba(255, 102, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #f5f5f5;
+}
+
+.registration-page-form h2 {
+    color: #ff6600;
+}
+
+/* Định dạng các phần tử form */
+.registration-page-form label,
+.registration-page-form select,
+.registration-page-form input[type="text"],
+.registration-page-form input[type="email"],
+.registration-page-form input[type="tel"],
+.registration-page-form textarea {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    border: 1px solid #ff6600;
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.registration-page-form label {
+    padding: 0; /* Loại bỏ padding để căn chỉnh */
+    color: #ff6600;
+}
+
+/* Định dạng cho Checkbox */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    /* Reset style mặc định của input type checkbox */
+    display: initial; 
+    padding: 0;
+}
+
+.checkbox-container .inline-label {
+    display: inline;
+    margin-top: 0;
+    color: #f5f5f5; /* Màu trắng cho label của checkbox */
+}
+
+/* Nút Gửi Đăng ký */
+.registration-page-form .submit-button {
+    width: 100%;
+    margin-top: 30px;
+    font-size: 1.5em;
+    padding: 15px 0;
+    background-color: #ff6600;
+    color: #1a1a1a;
+    border: none;
+}
+
+.registration-page-form .submit-button:hover {
+    background-color: #f17c28;
+}
